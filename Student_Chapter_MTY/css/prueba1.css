@@ -137,29 +137,39 @@ section .content .images img:hover {
     transform: scale(1.05);
 }
 
-.events .event, .blog-posts .blog-post {
-    background-color: #1f1f1f;
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s;
+/* Event Section */
+.events {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
 }
 
-.events .event:hover, .blog-posts .blog-post:hover {
+.events .event {
+    background-color: #1f1f1f;
+    padding: 5px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    flex: 0 0 auto;
+    width: calc(100% / 3); /* Adjust the number of items visible in a row */
+}
+
+.events .event:hover {
     transform: translateY(-10px);
 }
 
-.events .event img, .blog-posts .blog-post img {
-    width: 50%;
+.events .event img {
+    width: 100%; /* Ensure images take full width of the post */
     border-radius: 10px;
     margin-bottom: 10px;
     align-items: center;
 }
 
-.events .event-info, .blog-posts .post-info {
-    text-align: left;
+.events .event-info {
+    text-align: center;
 }
 
-.events .event-info h3, .blog-posts .post-info h3 {
+.events .event-info h3 {
     margin-bottom: 10px;
 }
 
